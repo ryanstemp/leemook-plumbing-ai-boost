@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import blogHero from "@/assets/blog-hero.jpg";
 
 const content: Record<string, { title: string; body: string; date: string }> = {
   "plumbing-headaches": {
@@ -36,6 +37,14 @@ const BlogPost = () => {
           <>
             <h1 className="font-display text-4xl md:text-5xl tracking-tight mb-4">{post.title}</h1>
             <div className="text-xs text-muted-foreground mb-6">{new Date(post.date).toLocaleDateString()}</div>
+            <img
+              src={blogHero}
+              alt={`${post.title} – Leemook Plumbing blog`}
+              className="w-full rounded-lg border mb-6"
+              loading="eager"
+              width={1600}
+              height={896}
+            />
             <p className="text-lg text-muted-foreground">{post.body}</p>
           </>
         ) : (

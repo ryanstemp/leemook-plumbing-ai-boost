@@ -3,6 +3,7 @@ import { Wrench, Droplets, Flame, RefreshCcw } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import servicesHero from "@/assets/services-hero.jpg";
 
 const services = [
   { to: "/services/emergency-repairs", title: "Emergency Repairs", icon: Wrench, desc: "Fast, dependable fixes when you need them most." },
@@ -21,6 +22,14 @@ const Services = () => {
       />
       <section className="container mx-auto py-12">
         <h1 className="font-display text-4xl md:text-5xl tracking-tight mb-6">Plumbing Services</h1>
+        <img
+          src={servicesHero}
+          alt="Plumbing services in Atlanta – Leemook Plumbing"
+          className="w-full rounded-lg border mb-6"
+          loading="eager"
+          width={1600}
+          height={896}
+        />
         <p className="text-lg text-muted-foreground mb-10 max-w-2xl">
           From urgent emergencies to planned upgrades, our licensed and insured pros have you covered.
         </p>

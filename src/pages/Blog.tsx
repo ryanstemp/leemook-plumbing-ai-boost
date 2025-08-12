@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import blogHero from "@/assets/blog-hero.jpg";
 
 const posts = [
   {
@@ -33,6 +34,14 @@ const Blog = () => (
     />
     <section className="container mx-auto py-12">
       <h1 className="font-display text-4xl md:text-5xl tracking-tight mb-6">Blog</h1>
+      <img
+        src={blogHero}
+        alt="Plumbing tips and advice blog – Leemook Plumbing"
+        className="w-full rounded-lg border mb-6"
+        loading="eager"
+        width={1600}
+        height={896}
+      />
       <div className="grid gap-6 md:grid-cols-3">
         {posts.map((p) => (
           <Card key={p.slug} className="h-full">

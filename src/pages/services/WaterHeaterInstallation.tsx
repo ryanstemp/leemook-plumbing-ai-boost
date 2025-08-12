@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { ServicePage } from "@/components/ServicePage";
+import waterHeaterImg from "@/assets/water-heater.jpg";
 
 const WaterHeaterInstallation = () => (
   <Layout>
@@ -16,6 +17,8 @@ const WaterHeaterInstallation = () => (
         { q: "How long does installation take?", a: "Most installs are completed the same day in 2–4 hours." },
         { q: "Should I go tankless?", a: "We’ll assess your usage and recommend the most efficient, cost‑effective option." },
       ]}
+      imageSrc={waterHeaterImg}
+      imageAlt="Water heater installation in Atlanta — new unit with tidy copper piping"
       path="/services/water-heater-installation"
     />
   </Layout>

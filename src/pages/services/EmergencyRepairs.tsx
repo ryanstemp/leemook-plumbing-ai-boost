@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { ServicePage } from "@/components/ServicePage";
+import emergencyImg from "@/assets/emergency-repairs.jpg";
 
 const EmergencyRepairs = () => (
   <Layout>
@@ -16,6 +17,8 @@ const EmergencyRepairs = () => (
         { q: "Do you offer same‑day service?", a: "Yes—most emergencies are handled the same day, often within hours." },
         { q: "Is there an emergency fee?", a: "We provide transparent pricing upfront before work begins." },
       ]}
+      imageSrc={emergencyImg}
+      imageAlt="Emergency plumbing repairs in Atlanta — burst pipe fixed by Leemook Plumbing"
       path="/services/emergency-repairs"
     />
   </Layout>

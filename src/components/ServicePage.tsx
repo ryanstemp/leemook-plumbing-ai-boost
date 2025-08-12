@@ -10,9 +10,11 @@ interface ServicePageProps {
   bullets?: string[];
   faqs?: FAQ[];
   path?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
-export const ServicePage = ({ title, description, bullets = [], faqs = [], path }: ServicePageProps) => {
+export const ServicePage = ({ title, description, bullets = [], faqs = [], path, imageSrc, imageAlt }: ServicePageProps) => {
   const canonical = path ? (typeof window !== 'undefined' ? `${window.location.origin}${path}` : path) : undefined;
   return (
     <>
@@ -21,6 +23,16 @@ export const ServicePage = ({ title, description, bullets = [], faqs = [], path 
         <div className="max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl tracking-tight mb-4">{title}</h1>
           <p className="text-lg text-muted-foreground mb-6">{description}</p>
+          {imageSrc && (
+            <img
+              src={imageSrc}
+              alt={imageAlt || `${title} service by Leemook Plumbing`}
+              className="w-full rounded-lg border mb-6"
+              loading="eager"
+              width={1600}
+              height={896}
+            />
+          )}
           {bullets.length > 0 && (
             <ul className="grid gap-2 mb-8 list-disc list-inside">
               {bullets.map((b) => (

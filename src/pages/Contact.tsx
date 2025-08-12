@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { ContactForm } from "@/components/ContactForm";
+import contactOffice from "@/assets/contact-office.jpg";
 
 const Contact = () => (
   <Layout>
@@ -11,6 +12,14 @@ const Contact = () => (
     />
     <section className="container mx-auto py-12 grid gap-8 md:grid-cols-2 items-start">
       <div>
+        <img
+          src={contactOffice}
+          alt="Call or request a free estimate – Leemook Plumbing office"
+          className="w-full rounded-lg border mb-6"
+          loading="eager"
+          width={1600}
+          height={896}
+        />
         <h1 className="font-display text-4xl md:text-5xl tracking-tight mb-4">Get a Free Estimate</h1>
         <p className="text-lg text-muted-foreground mb-6">Tell us what you need—our team will respond quickly.</p>
         <ContactForm />

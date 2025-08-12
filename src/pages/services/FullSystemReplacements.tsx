@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { ServicePage } from "@/components/ServicePage";
+import replacementsImg from "@/assets/full-system-replacements.jpg";
 
 const FullSystemReplacements = () => (
   <Layout>
@@ -16,6 +17,8 @@ const FullSystemReplacements = () => (
         { q: "Do you handle permits?", a: "Yes, we manage permits and inspections where required." },
         { q: "Can I replace sections over time?", a: "We can phase projects to fit budget and priorities." },
       ]}
+      imageSrc={replacementsImg}
+      imageAlt="Full plumbing system replacements and repiping in Atlanta"
       path="/services/full-system-replacements"
     />
   </Layout>

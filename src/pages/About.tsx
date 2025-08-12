@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import aboutTeam from "@/assets/about-team.jpg";
 
 const About = () => (
   <Layout>
@@ -10,6 +11,14 @@ const About = () => (
     />
     <section className="container mx-auto py-12 max-w-3xl">
       <h1 className="font-display text-4xl md:text-5xl tracking-tight mb-4">We treat you like family</h1>
+      <img
+        src={aboutTeam}
+        alt="Leemook Plumbing team with a homeowner in Atlanta"
+        className="w-full rounded-lg border mb-6"
+        loading="eager"
+        width={1600}
+        height={896}
+      />
       <p className="text-lg text-muted-foreground mb-6">
         Since day one, our mission has been simple: do right by every customer. That means honest, upfront pricing, clear communication, and workmanship we’d be proud to deliver in our own homes.
       </p>
